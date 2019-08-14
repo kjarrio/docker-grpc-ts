@@ -1,0 +1,28 @@
+{
+  "name": "docker-grpc-ts",
+  "description": "Docker image for generating gRPC services for Typescript",
+  "version": "0.0.1",
+  "scripts": {
+    "compile": "npm run compile_js && npm run compile_ts",
+    "compile_js": "grpc_tools_node_protoc --js_out=import_style=commonjs,binary:./src/ --grpc_out=./src/ --plugin=protoc-gen-grpc=grpc_tools_node_protoc_plugin -I ../includes/ ../includes/test.proto",
+    "compile_ts": "grpc_tools_node_protoc --plugin=protoc-gen-ts=protoc-gen-ts --ts_out=./src/ -I ../includes/ ../includes/test.proto",
+    "start": "npm run compile"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kjarrio/docker-grpc-ts.git"
+  },
+  "keywords": [
+    "gRPC",
+    "TypeScript",
+    "Docker"
+  ],
+  "author": "Kjartan Olason <olasonk@gmail.com> (https://kjartan.com.br)",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/kjarrio/docker-grpc-ts/issues"
+  },
+  "homepage": "https://github.com/kjarrio/docker-grpc-ts#readme",
+  "dependencies": {},
+  "devDependencies": {}
+}
