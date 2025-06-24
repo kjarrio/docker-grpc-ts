@@ -18,7 +18,7 @@
     "Docker"
   ],
   "author": "Kjartan Olason <olasonk@gmail.com> (https://kjartan.com.br)",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/kjarrio/docker-grpc-ts/issues"
   },
